@@ -1,0 +1,11 @@
+Package: gridheat
+Title: Heatmap plots using grid graphics
+Description: gridheat provides a set of tools and functions for plotting
+    heatmaps using grid graphics.
+Version: 0.1
+Authors@R: c(person("Ali", "Tofigh", email="alix.tofigh@gmail.com",
+    role=c("cre", "aut")))
+Depends:
+    R (>= 3.0.1)
+License: GPL (>= 2)
+LazyData: true
