@@ -6,6 +6,8 @@ Version: 0.1
 Authors@R: c(person("Ali", "Tofigh", email="alix.tofigh@gmail.com",
     role=c("cre", "aut")))
 Depends:
-    R (>= 3.0.1)
+    R (>= 3.0.1),
+    scales (>= 0.2.3),
+    colorspace (>= 1.2)
 License: GPL (>= 2)
 LazyData: true
