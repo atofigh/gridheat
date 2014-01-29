@@ -9,8 +9,8 @@
 #' breaks[n]](breaks[n], +Inf)}
 #'
 #' @export
-#' @param breaks vector of breakpoints for the color scheme
-#' @param colors character vector of length \code{length(breaks) + 1}
+#' @param breaks Vector of breakpoints for the color scheme
+#' @param colors Character vector of length \code{length(breaks) + 1}
 #' describing colors
 ColorScheme <- function(breaks, colors)
 {
