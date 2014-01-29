@@ -1,1 +1,5 @@
+S3method(gheat,default)
+S3method(gheat,matrix)
+S3method(print,gheat)
 export(ColorScheme)
+export(gheat)

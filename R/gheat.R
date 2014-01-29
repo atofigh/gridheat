@@ -8,6 +8,7 @@
 #' @param x A matrix, a 2-dimensional array, or an object that can be
 #' coerced to a matrix.
 #' @param ... Other arguments passed to specific methods
+#' @export
 gheat <- function(x, ...)
 {
     UseMethod("gheat")
@@ -19,6 +20,7 @@ gheat <- function(x, ...)
 #' \code{color.scheme} is missing.
 #'
 #' @param color.scheme (optional) A \code{\link{ColorScheme}} object
+#' @S3method gheat matrix
 gheat.matrix <- function(x, color.scheme, ...)
 {
     if (missing(color.scheme) || is.null(color.scheme))
@@ -29,6 +31,7 @@ gheat.matrix <- function(x, color.scheme, ...)
 }
 
 #' @rdname gheat
+#' @S3method gheat matrix
 gheat.array <- function(x, color.scheme, ...)
 {
     if (missing(color.scheme) || is.null(color.scheme))
@@ -42,6 +45,7 @@ gheat.array <- function(x, color.scheme, ...)
 #'
 #' @details The default method will try to coerce \code{x} to a matrix
 #' and will fail if the coercion fails.
+#' @S3method gheat default
 gheat.default <- function(x, color.scheme, ...)
 {
     if (missing(color.scheme) || is.null(color.scheme))
