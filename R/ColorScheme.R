@@ -12,11 +12,13 @@
 #' @param breaks Vector of breakpoints for the color scheme
 #' @param colors Character vector of length \code{length(breaks) + 1}
 #' describing colors
-ColorScheme <- function(breaks, colors)
+#' @param na.color Color used for NAs
+ColorScheme <- function(breaks, colors, na.color)
 {
     stopifnot(length(breaks) + 1 == length(colors))
     ret <- structure(list(breaks=breaks,
-                          colors=colors),
+                          colors=colors,
+                          na.color=na.color),
                      class="ColorScheme")
     ret
 }
@@ -32,5 +34,5 @@ getDefaultDivColorScheme <- function()
     blues <- gradient_n_pal(c(grey, blue), space="Lab")(seq(0, 1, length.out=7)^power)[-1]
     colors <- c(rev(blues), reds)
     breaks <- seq(-3, 3, length.out=length(colors) - 1)
-    ColorScheme(breaks, colors)
+    ColorScheme(breaks, colors, "grey35")
 }
