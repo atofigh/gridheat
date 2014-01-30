@@ -39,12 +39,10 @@ getDefaultDivColorScheme <- function()
 
 mapToColor <- function(x, color.scheme)
 {
-    if (length(dim(x)) != 2 || !is.numeric(x))
-        stop("'x' must be a numeric matrix")
-
     xi <- findInterval(x, color.scheme$breaks, rightmost.closed=TRUE) + 1
     xi[is.na(xi)] <- length(color.scheme$colors) + 1
     x.colors <- c(color.scheme$colors, color.scheme$na.colors)[xi]
     dim(x.colors) <- dim(x)
+    dimnames(x.colors) <- dimnames(x)
     x.colors
 }
