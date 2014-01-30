@@ -9,6 +9,11 @@
 #' coerced to a matrix.
 #' @param ... Other arguments passed to specific methods
 #' @export
+#'
+#' @examples
+#' m <- matrix(rnorm(15), nrow=3)
+#' m[2, 2] <- NA
+#' gheat(m)
 gheat <- function(x, ...)
 {
     UseMethod("gheat")

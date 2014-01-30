@@ -13,6 +13,13 @@
 #' @param colors Character vector of length \code{length(breaks) + 1}
 #' describing colors
 #' @param na.color Color used for NAs
+#'
+#' @return An object of class ColorScheme, which has three components:
+#' \code{breaks}, \code{colors}, and \code{na.color}.
+#'
+#' @examples
+#' breaks <- seq(-1, 1, length.out=10)
+#' ColorScheme(breaks, div_gradient_pal()(seq(0, 1, length.out=length(breaks)+1)), "grey30")
 ColorScheme <- function(breaks, colors, na.color)
 {
     stopifnot(length(breaks) + 1 == length(colors))

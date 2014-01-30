@@ -5,6 +5,11 @@
 #' draw the heatmap. Otherwise, draws the heatmap using rectangles.
 #' @param ... Currently unused.
 #' @export
+#'
+#' @examples
+#' m <- matrix(rnorm(15), nrow=3)
+#' g <- gheat(m)
+#' print(g)
 print.gheat <- function(x, use.raster=TRUE, ...)
 {
     stopifnot(inherits(x, "gheat"))
